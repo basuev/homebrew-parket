@@ -18,9 +18,16 @@ cask "tatami" do
       system_command "/bin/cp",
                      args: ["#{staged_app}/Contents/Info.plist",
                             "#{app_path}/Contents/Info.plist"]
+      system_command "/usr/bin/xattr",
+                     args: ["-dr", "com.apple.quarantine", app_path]
+      system_command "/usr/bin/codesign",
+                     args: ["--force", "--sign", "-", app_path]
     else
       system_command "/bin/cp", args: ["-R", staged_app, app_path]
-      system_command "/usr/bin/codesign", args: ["--force", "--sign", "-", app_path]
+      system_command "/usr/bin/xattr",
+                     args: ["-dr", "com.apple.quarantine", app_path]
+      system_command "/usr/bin/codesign",
+                     args: ["--force", "--sign", "-", app_path]
       system "open", "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
     end
   end
