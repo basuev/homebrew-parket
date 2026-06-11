@@ -1,6 +1,6 @@
 cask "parket" do
-  version "0.6.0"
-  sha256 "73fd2eadcfc8aecaf6df7b37b8c70af683dd270fdab2fd779f39af5ae54636be"
+  version "0.7.0"
+  sha256 "e11742e2d1220279741a8f2bc0de31f7902502a86c46a9bb5c9962411abd684b"
 
   url "https://github.com/basuev/parket/releases/download/v#{version}/parket.zip"
   name "parket"
