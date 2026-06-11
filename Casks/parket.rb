@@ -38,8 +38,7 @@ cask "parket" do
     end
   end
 
-  uninstall quit:   bundle_id,
-            delete: "/Applications/parket.app"
+  uninstall quit: bundle_id
 
   zap trash: "~/.config/parket"
 end
