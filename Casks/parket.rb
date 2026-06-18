@@ -2,8 +2,8 @@ cask "parket" do
   bundle_id = "com.parket.app"
   codesign_requirement = '=designated => identifier "com.parket.app"'
 
-  version "0.7.3"
-  sha256 "23964dee18b1d8b403367639ead5b59058796f1976b22080649a46b97e7d92ee"
+  version "0.8.0"
+  sha256 "7713715ff5f7eb50c2ca3f2ab734bb9fd64b4188367a3af81fc890b05b436e6d"
 
   url "https://github.com/basuev/parket/releases/download/v#{version}/parket.zip"
   name "parket"
